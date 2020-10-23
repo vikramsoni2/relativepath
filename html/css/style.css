@@ -1,0 +1,88 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+:root {
+  font-size: 18px;
+}
+
+body {
+  max-width: 900px;
+  margin:0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  gap:20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 1fr;
+}
+
+.head {margin-bottom: 0;text-align: center;}
+.head, .detail{
+  grid-column: 1/-1;
+}
+
+#test1_html, #test1_css {
+  position: relative;
+  border: 2px solid #1067de;
+}
+
+
+input[type="text"]{
+  font-size: 16px;
+  width: 195px;
+}
+
+#imp_img, #inp_bg {
+  display: block;
+  position: absolute;
+}
+
+#imp_img {
+  left:194px;
+  top:113px;
+}
+
+#inp_bg {
+  left:227px;
+  top:68px;
+  width: 173px;
+}
+
+
+button {
+  font-size: 20px;
+}
+
+.label {
+  padding:3px 10px;
+  background-color: #1067de;
+  color: white;
+}
+
+pre {
+  position:relative;
+  margin-top:0;
+  line-height: 23px;
+  width: 450px;
+}
+
+
+
+#box_img{
+  background-color: #333;
+  margin: 20px 0;
+  width: 200px;
+  height:200px;
+  border:5px solid #fff;
+}
+
+#box_bg {
+  background: url('../background2.png');
+  margin: 20px 0;
+  width: 200px;
+  height:200px;
+  border:5px solid #fff;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relative Paths</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1 class="head">Relative path exercise</h1>
+  <div class="detail">
+    <p>Its an exercise to learn relative path in web development. When a URL is used within a document, such as in an HTML page or CSS file, it already has the url of the document (HTML/CSS) its being used as a base. So from there we use <code>./</code> to navigate from current directory or <code>../</code> to go one directory up. </p>
+    <p>For example: a url of <code>../img/image1.png</code> shows that in order to locate an image, we need to go one directory up from current (HTML/CSS) document's directory and then go down inside <code>img</code> folder to locate the <code>image1.png</code> file.</p>
+  </div>
+
+  <div>
+    
+    <div id="test1_html">
+      <div class="label">html/test1.html</div>
+      <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Test 1&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src=&quot;                  &quot;/&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code><input id="imp_img" type="text" value="./img/image1.png"></pre>
+    </div>
+    <button id="btn_img">Test</button>
+    <div><img id="box_img" src="img/image1.png" alt=""></div>
+
+
+    <div id="test1_css">
+      <div class="label">html/css/style.css</div>
+      <pre><code>.div_bg{
+    width: "200px";
+    height: "200px";
+    background: url("                "); 
+    background-color: #333;
+}</code><input id="inp_bg" type="text" value="../background2.png"></pre>
+    </div>
+    <button id="btn_bg">Test</button>
+    <div id="box_bg"></div>
+  </div>
+
+
+  <div><img src="../folder.png" alt="test"></div>
+
+
+  <script>
+    document.querySelector('#btn_img').addEventListener('click', function () {
+      const url = document.querySelector('#imp_img').value;
+      document.querySelector('#box_img').src = url;
+
+    });
+
+    document.querySelector('#btn_bg').addEventListener('click', function () {
+      const url = document.querySelector('#inp_bg').value;
+      document.querySelector('#box_bg').style.background = 'url("./ccs/' + url + '")';
+    });
+  </script>
+</body>
+
+</html>
