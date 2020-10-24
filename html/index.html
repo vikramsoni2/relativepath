@@ -10,13 +10,20 @@
 
 <body>
   <h1 class="head">Relative path exercise</h1>
-  <div class="detail">
-    <p>Its an exercise to learn relative path in web development. When a URL is used within a document, such as in an HTML page or CSS file, it already has the url of the document (HTML/CSS) its being used as a base. So from there we use <code>./</code> to navigate from current directory or <code>../</code> to go one directory up. </p>
-    <p>For example: a url of <code>../img/image1.png</code> shows that in order to locate an image, we need to go one directory up from current (HTML/CSS) document's directory and then go down inside <code>img</code> folder to locate the <code>image1.png</code> file.</p>
-  </div>
 
-  <div><img src="../folder.png" alt="test"></div>
-  <div>
+  <div><img height="250px" src="../folder.png" alt="test"></div>
+  <div class="detail">
+    <p>On the left image, you can see the structure of the directory and the image files named image1,image2, image3 and image4 located in various location. We also have our index.html and style.css in different location.</p>
+    <p>
+      Below, you can see the code from index.html and style.css where you can modify the path of the image file.
+      Please modify the path of the image in index.html and style.css and click on <b>Test button</b> below to check if your path is correct. </p>
+    
+    <p><b>Your goal is to use all 4 images in both html and css document.</b> </p>
+  
+    </div>
+
+  
+  <div class="testbox">
     <div id="test1_html">
       <div class="label">html/test1.html</div>
       <pre><code>&lt;html&gt;
@@ -28,23 +35,31 @@
     &lt;/body&gt;
 &lt;/html&gt;</code><input id="imp_img" type="text" value="./img/image1.png"></pre>
     </div>
-    <button id="btn_img">Test</button>
+    
+  </div>
+  <div>
     <div><img id="box_img" src="img/image1.png" alt=""></div>
-
-
+    <button id="btn_img">Test</button>
+  </div>
+    
+  
+  <div class="testbox">
     <div id="test1_css">
       <div class="label">html/css/style.css</div>
-      <pre><code>.div_bg{
+      <pre><code>
+.div_bg{
     width: "200px";
     height: "200px";
     background: url("                "); 
     background-color: #333;
-}</code><input id="inp_bg" type="text" value="../background2.png"></pre>
+}</code><input id="inp_bg" type="text" value="../image2.png"></pre>
     </div>
-    <button id="btn_bg">Test</button>
-    <div id="box_bg"></div>
+    
   </div>
-
+  <div>
+    <div id="box_bg"></div>
+    <button id="btn_bg">Test</button>
+  </div>
 
   <script>
     document.querySelector('#btn_img').addEventListener('click', function () {
